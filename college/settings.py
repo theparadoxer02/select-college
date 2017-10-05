@@ -26,7 +26,7 @@ print(BASE_DIR)
 SECRET_KEY = 'jxzj1j#t*+v%0xda-s6=jbt7u_^4#vt!nf%v=bn4c8e1m-2^i%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
