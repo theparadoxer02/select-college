@@ -1,0 +1,52 @@
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="../../favicon.ico">
+
+        <title> College Selection </title>
+
+        <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+
+        <script src="https://use.fontawesome.com/a7259c8b0d.js"></script>
+
+    </head>
+
+    <body>
+
+        {% include 'navbar.html' %}
+
+
+        {% block jumbotron %}
+
+        {% endblock %}
+
+        <div class="container">
+
+
+  <h1>{{ user.username }}</h1>
+  <form class="form-horizontal" method="post" action=".">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <div class="control-group">
+      <div class="controls">
+        <button type="submit" class="btn">Submit</button>
+      </div>
+    </div>
+  </form>
+
+
+</html>
