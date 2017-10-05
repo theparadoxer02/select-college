@@ -68,3 +68,6 @@ class CollegeInfo(models.Model):
     college = models.ForeignKey(College)
     fee = models.CharField(max_length=10)
     average_salary = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.college.name
