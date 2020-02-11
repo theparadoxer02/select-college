@@ -9,7 +9,7 @@ chardet==3.0.4
 constantly==15.1.0
 daphne==0.15.0
 dj-database-url==0.4.2
-Django==1.10.7
+Django==1.11.28
 django-channels==0.7.0
 django-crispy-forms==1.6.1
 django-multiselectfield==0.1.8
